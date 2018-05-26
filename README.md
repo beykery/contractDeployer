@@ -5,10 +5,12 @@
 ##工具准备  
 
 依次执行下列安装  
+
 `npm install -g solc `  
 `npm install -g solc-cli`  
 `brew tap web3j/web3j`  
 `brew install web3j`  
+
 ##编写合约  
 
 请参考根目录下的TestToken.sol  
