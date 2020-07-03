@@ -2,7 +2,7 @@
 
 以太坊智能合约的部署
 
-##工具准备  
+## 工具准备  
 
 依次执行下列安装  
 
@@ -11,7 +11,7 @@
 `brew tap web3j/web3j`  
 `brew install web3j`  
 
-##编写合约  
+## 编写合约  
 
 请参考根目录下的TestToken.sol  
 这是一个符合erc20规范的代币实现  
@@ -23,13 +23,13 @@ string constant public symbol 的值改为XXX
 即可，如果你想修改发行量和精度，则修改string constant public symbol  
 和uint8 constant public decimals 的值  
 
-##编译合约  
+## 编译合约  
 
 在根目录执行 ：  
 `solcjs XXXToken.sol --bin --abi --optimize -o ./contracts/`  
 `web3j solidity generate ./contracts/XXXToken_sol_XXXToken.bin ./contracts/XXXToken_sol_XXXToken.abi -o ./src/main/java -p org.beykery.contract.deployer.contract`  
 
-##部署合约  
+## 部署合约  
 
 如果以上执行无误，则会发现在./src/main/java/org/beykery/contract/deployer/contract  
 下会生成一个XXXToken_sol_XXXToken.java，这个就是合约的代理类，下面我们通过执行它的deploy  
